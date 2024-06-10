@@ -2,45 +2,90 @@ Realización de casos de uso
 
 Realización del Caso de Uso: Registrar nuevo cliente
 Clases:
+  interfaz de usuario 
+  control gestor cliente
+  entidad cliente
 
 Realización del Caso de Uso: Actualizar información de cliente
 Clases:
-
+  interfaz de usuario 
+  control gestor cliente
+  entidad cliente
 Realización del Caso de Uso: Dar de baja cliente
 Clases:
-
+  interfaz de usuario 
+  control gestor cliente
+  entidad cliente
 Realización del Caso de Uso: Consultar cliente
 Clases:
-
+  interfaz de usuario 
+gestor cliente
+  entidad cliente
 Realización del Caso de Uso: Registrar nuevo vehículo
 Clases:
-
+  interfaz de usuario 
+  control gestor vehiculo
+  entidad vehiculo
 Realización del Caso de Uso: Actualizar información de vehículo
 Clases:
-
+  interfaz de usuario 
+  control gestor vehiculo
+  entidad vehiculo
 Realización del Caso de Uso: Dar de baja vehículo
 Clases:
-
+  interfaz de usuario 
+  control gestor vehiculo
+  entidad vehiculo
 Realización del Caso de Uso: Consultar vehículo
 Clases:
-
+  interfaz de usuario 
+  gestor vehiculo
+  entidad vehiculo
 Realización del Caso de Uso: Realizar reserva de alquiler
 Clases:
-
+  interfaz de usuario 
+  gestor cliente
+  gestor vehiculo
+  gestor costo adicional
+  entidad vehiculo
+  entidad cliente
+  entidad reserva alquiler 
+  entidad costo adicional
 Realización del Caso de Uso: Generar factura
 Clases:
-
+  interfaz de usuario 
+  realizar reserva
+  calcular costo
+  entidad costo adicional
 Realización del Caso de Uso: Generar informe de inventario
 Clases:
-
+  interfaz de usuario 
+  gestor cliente
+  gestor vehiculo
+  realizar reserva
+  gestor costo adicional
+  entidad cliente
+  entidad vehiculo
+  entidad reserva alquiler
+  entidad factura
+  entidadcosto adicional 
 Realización del Caso de Uso: Registrar nuevo cargo adicional
 Clases:
-
+  interfaz de usuario 
+  control gestor costo adicional 
+  entidad costo adicional 
 Realización del Caso de Uso: Actualizar información de cargo adicional
 Clases:
-
+  interfaz de usuario 
+  control gestor costo adicional 
+  entidad costo adicional 
 Realización del Caso de Uso: Dar de baja cargo adicional
 Clases:
-
+  interfaz de usuario 
+  control gestor costo adicional 
+  entidad costo adicional 
 Realización del Caso de Uso: Consultar cargo adicional
 Clases:
+  interfaz de usuario 
+  gestor costo adicional 
+  entidad costo adicional 
