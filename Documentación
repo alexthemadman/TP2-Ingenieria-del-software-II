@@ -24,33 +24,41 @@ ETAPA DE REQUERIMIENTOS DEL SISTEMA
             •	CU6: Actualizar información de vehículo.
             •	CU7: Dar de baja vehículo.
             •	CU8: Consultar vehículo.
-            •	CU9: Realizar reserva de alquiler.
+            •	CU9: Realizar reserva de alquile
             •	CU10: Generar factura.
-            •	CU11: Generar informe de inventario.
+            •	CU11: Generar informe.
             •	CU12: Registrar nuevo cargo adicional.
             •	CU13: Actualizar información de cargo adicional.
             •	CU14: Dar de baja cargo adicional.
             •	CU15: Consultar cargo adicional.
-
 ETAPA DE ANÁLISIS
     1.	Diagrama de análisis:
         a.	Clases de análisis entidades:
-            •	Vehículo.
-            •	Cliente.
-            •	Alquiler.
-            •	Informe.
-            •	Factura
-            •	Costo adicional
+            •	Vehículo. (propiedades: marca, modelo, año, numero_de_placa, kilometraje y estado)
+            •	Cliente. (propiedades: nombre, dirección, teléfono, mail, licencia)
+            •	Alquiler. (propiedades: cliente, vehículo, fecha_inicio, fecha_vencimiento, fecha_recogida, día_devolución)
+            •	Informe. (propiedades: vehículos disponibles, alquileres vigentes, alquileres por cliente, ingresos netos por periodos de tiempo, factura)
+            •	Factura. (costo total, cliente, vehículo)
+            •	Costo adicional. (propiedades: nombre, tipo, costo)
         b.	Clases de análisis control:
-            •	Gestor vehículo
-            •	Gestor cliente
-            •	Gestor alquiler
-            •	Calcular costo alquiler
+            •	Gestor vehículo. (operaciones: alta_vehículo(), baja_vehículo(), modificar_vehículo())
+            •	Gestor cliente. (operaciones: alta_cliente(), baja_cliente(), modificar_cliente())
+            •	Gestor alquiler. (operaciones: alta, baja, modificar)
+            •	Calcular costo alquiler. (operaciones: calcular_costo())
+            •	Gestor informes. (operaciones: alta_informes(), baja_informes(), modificar_informes())
         c.	Clase de análisis interfaz:
-        •	    Menú
+            •	Menú. (operaciones: mostrar_gestor_cliente(), mostrar_gestor_vehiculo(), mostrar_gestor_alquiler(), mostrar_gestor_costo_adicional(), mostrar_gestor_documento())
+            •	Gestor cliente (operaciones: mostrar cliente()).
+            •	gestor_vehiculo (operaciones: mostrar vehiculo()).
+            •	gestor_alquiler(operaciones: mostrar_alquiler, generar_factura()).
+            •	mostrar_gestor_costo_adicional(operaciones: mostrar_costo_adicional()).
+            •	gestor_documento(operaciones: mostrar_informes())
     2.	Paquetes de análisis:
         a.	Vehículos: contiene todas las clases relacionada al mantenimientos (gestión) de vehículos.
         b.	Clientes: contiene todas las clases relacionadas al mantenimiento (gestión) de clientes.
         c.	Reserva de alquiler: contiene todas las clases relacionadas a la creación, modificación y eliminación de reservas de alquileres, cálculos de su costo y gestión de facturas.
         d.	Costo adicional: contiene todas las clases relacionadas al mantenimiento (gestión) de costos adicionales.
-
+        e.	Informes: contiene todas las clases relacionadas al mantenimiento (gestión)
+    3.	Modelo de estados:
+        a.	 Estados del producto: Disponible, en alquiler, Dado de baja.
+        b.	Transiciones entre los estados basadas en las acciones realizadas (registrar, actualizar, dar de baja, alquilar, devolución)
